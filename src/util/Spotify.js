@@ -1,5 +1,5 @@
 const clientId = '06392bccde364a16be713f767ed0be1d';
-const redirectUri = 'http://localhost:3000';
+const redirectUri = 'http://jammming-xdvch.surge.sh/';
 let accessToken;
 
 const Spotify = {
@@ -19,8 +19,7 @@ const Spotify = {
             window.history.pushState('Access Token', null, '/');
             return accessToken;
         } else {
-            const accessUrl = `https://accounts.spotify.com/authorize?
-            client_id=${clientId}&response_type=token&
+            const accessUrl = `https://accounts.spotify.com/authorize?client_id=${clientId}&response_type=token&
             scope=playlist-modify-public&redirect_uri=${redirectUri}`;
             window.location = accessUrl;
 
